@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tapestry&display=swap');
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: #162d3a;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/public/assets/images/unv-img.png);
+  background-repeat: no-repeat;
+  background-size: cover; /* Rasmni butun ekran o‘lchamiga moslashtiradi */
+
+  .container {
+    width: 70%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    flex-direction: row;
+    z-index: 10;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+
+    .login-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .login-heading {
+        font-size: 45px;
+        color: #162d3a;
+        line-height: 110%;
+        margin-bottom: 2%;
+      }
+
+      .login-desc {
+        font-size: 16px;
+        color: #162d3ac9;
+        line-height: 130%;
+        margin-bottom: 5%;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .id-wrapper,
+        .password-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .login-label,
+          .password-label {
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 600;
+          }
+
+          .login-input,
+          .password-input {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            padding-left: 15px;
+            padding-right: 15px; /* to'liq padding */
+            font-size: 15px;
+            color: #000;
+            border: 2px solid #e5e9f1;
+            background-color: #f7fbff;
+            transition: all 0.3s ease-in-out;
+            font-family: "Open Sans", sans-serif;
+
+
+            &:hover {
+              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+              transition: all 0.3s ease-in;
+            }
+          }
+
+          .password-input-wrapper {
+            position: relative;
+
+            .password-toggle-btn {
+              position: absolute;
+              top: 50%;
+              right: 10px;
+              transform: translateY(-50%);
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+
+        .login-btn {
+          width: 100%;
+          height: 40px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          font-weight: 600;
+          border: 2px solid #162d3a;
+          background-color: #162d3a;
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          font-family: "Open Sans", sans-serif;
+
+
+          &:hover {
+            background-color: #fff;
+            color: #162d3a;
+            transition: all 0.3s ease-in;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          }
+
+          &:active {
+            opacity: 0.6;
+            transition: all 0.3s ease-in;
+          }
+        }
+
+        .error-message {
+          font-size: 13px;
+          color: red;
+          margin-top: -10px;
+        }
+      }
+    }
+
+    .login-right {
+      width: 50%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .unv-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+
+    .login-bottom-desc {
+      position: absolute;
+      bottom: 5%;
+      transform: translateX(-0%);
+      font-size: 15px;
+      color: #162d3a;
+    }
+  }
+}
+
+.strictly {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+/* Boshqa kodlar */
+
+.strictly {
+  color: red;
+  font-weight: bold;
+
+  /* Media query uchun boshlang'ich o'lchamlar */
+  font-size: 14px;
+
+  @media (max-width: 575px) {
+    font-size: 12px; /* Kichik ekranlar uchun matn o'lchami */
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    font-size: 13px; /* O‘rta kichik ekranlar uchun matn o‘lchami */
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 14px; /* O‘rta ekranlar uchun matn o‘lchami */
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    font-size: 15px; /* Katta ekranlar uchun matn o‘lchami */
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 16px; /* Juda katta ekranlar uchun matn o‘lchami */
+  }
+}
+
+// Ekran o'lchami 1200px va undan kattaroq
+@media (min-width: 1200px) {
+  .login-wrapper {
+    .container {
+      width: 70%;
+      height: 90vh;
+
+      .login-left{
+        width: 45%;
+      }
+
+      .login-right {
+        width: 55%;
+      }
+
+
+      .login-right {
+        height: 80vh;
+
+        .unv-img {
+          height: 50vh;
+        }
+      }
+
+      .login-bottom-desc {
+        bottom: 3%;
+        transform: translateX(-0%);
+      }
+    }
+  }
+}
+
+// Ekran o'lchami 992px va undan kattaroq
+@media (min-width: 992px) and (max-width: 1199px) {
+  .login-wrapper {
+    .container {
+      width: 70%;
+      height: 85vh;
+
+      .login-left{
+        width: 45%;
+      }
+
+      .login-right {
+        width: 55%;
+      }
+
+      .login-right {
+        height: 60vh;
+
+        .unv-img {
+          height: 50vh;
+        }
+      }
+
+      .login-bottom-desc {
+        bottom: 0.5%;
+        transform: translateX(-0%);
+      }
+    }
+  }
+}
+
+// Ekran o'lchami 768px va undan kattaroq
+@media (min-width: 768px) and (max-width: 991px) {
+  .login-wrapper {
+    .container {
+      width: 80%;
+      height: auto;
+      flex-direction: column;
+
+      .login-left,
+      .login-right {
+        width: 100%;
+        height: auto;
+      }
+
+      .login-right {
+        margin-top: 20px;
+
+        .unv-img {
+          height: 40vh;
+        }
+      }
+
+      .login-bottom-desc {
+        bottom: 0.5%;
+        transform: translateX(-0%);
+      }
+    }
+  }
+}
+
+// Ekran o'lchami 576px va undan kattaroq
+@media (min-width: 576px) and (max-width: 767px) {
+  .login-wrapper {
+    .container {
+      width: 90%;
+      height: auto;
+      flex-direction: column;
+
+      .login-left,
+      .login-right {
+        width: 100%;
+        height: auto;
+      }
+
+      .login-right {
+        margin-top: 20px;
+
+        .unv-img {
+          height: 30vh;
+        }
+      }
+
+      .login-bottom-desc {
+        bottom: 0.5%;
+        transform: translateX(-0%);
+      }
+    }
+  }
+}
+
+// Ekran o'lchami 575px va kichik
+@media (max-width: 575px) {
+  .login-wrapper {
+    .container {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+
+      .login-left,
+      .login-right {
+        width: 100%;
+        height: auto;
+      }
+
+      .login-right {
+        margin-top: 20px;
+
+        .unv-img {
+          height: 25vh;
+        }
+      }
+
+      .login-bottom-desc {
+        bottom: 0.5%;
+        transform: translateX(-0%);
+      }
+    }
+  }
+}
