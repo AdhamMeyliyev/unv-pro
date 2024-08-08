@@ -54,7 +54,7 @@ const Login = () => {
     <div className="login-wrapper">
       <div className="container">
         <div className="login-left">
-          <h1 className="login-heading">Universitetga xush kelibsiz!</h1>
+          <h1 className="login-heading">KIU - Education</h1>
           <p className="login-desc">
             Bizning maqsad talabalarga sifatli ta’lim, soft skills ya’ni ta’lim
             berish bilan cheklanib qolmasdan, kerakli ko‘nikma berib, muhimi
