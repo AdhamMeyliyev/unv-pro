@@ -1,0 +1,84 @@
+.calendar-clock {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  height: 370px;
+  flex-direction: column;
+}
+
+.calendar {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.react-calendar {
+  border: none;
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #00b074; /* Hover va focus rangi */
+  color: white;
+}
+
+.react-calendar__tile--active {
+  background-color: #007b52; /* Tanlangan kunning rangi */
+  color: white;
+  font-weight: bold;
+}
+
+.react-calendar__navigation button {
+  background-color: #00b074; /* Tugmalar rangi */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.react-calendar__navigation button:enabled:hover {
+  background-color: #00b074; /* Hover rangi */
+}
+
+.react-calendar__navigation button[disabled] {
+  background-color: #e0e0e0; /* Disable qilingan tugmalar rangi */
+  cursor: not-allowed;
+}
+
+.clock {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.clock p {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  color: #9b1717;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: #9b1717;
+}
+
+.calendar__navigation__arrow,
+.react-calendar__navigation__label {
+  background-color: #00b074;
+}

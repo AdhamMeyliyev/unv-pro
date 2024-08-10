@@ -51,11 +51,11 @@ const App = () => {
           element={<Login onLogin={handleLogin} />}
         />
         <Route
-          path="/studentPage"
+          path="/studentpage"
           element={<ProtectedRoute element={<StudentPage onLogout={handleLogout} />} requiredRole="student" />}
         />
         <Route
-          path="/teacherPage"
+          path="/teacherpage"
           element={<ProtectedRoute element={<TeacherPage onLogout={handleLogout} />} requiredRole="teacher" />}
         />
         <Route

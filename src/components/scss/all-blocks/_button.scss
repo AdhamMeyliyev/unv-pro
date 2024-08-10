@@ -1,4 +1,30 @@
-button{
+.logout-btn {
     display: flex;
-    align-self: start;
-}
+    align-items: center;
+    width: 69%;
+    height: 54px;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 8px;
+    justify-content: center;
+    gap: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+  
+    &:hover{
+      background-color: #fff;
+      color: #464255;
+      transition: all .3s ease-in;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
+    }
+  
+    &:active{
+      opacity: 0.6;
+    }
+  
+  
+  }

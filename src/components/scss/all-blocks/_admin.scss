@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tapestry&display=swap");
+
+.admin-page-wrapper {
+  display: flex;
+  // align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Barlow", sans-serif;
+
+  .admin-left {
+    width: 25%;
+    padding-top: 22px;
+    padding-right: 46px;
+    background-color: #fff;
+    padding-left: 49px;
+  }
+
+  .admin-right {
+    width: 75%;
+    padding-top: 22px;
+    padding-right: 50px;
+    padding-left: 57px;
+    background-color: #f6f6f636;
+  }
+}
+
+.admin-page,.teacher-page, .student-page{
+    font-size: 32px;
+    color: #464255;
+    margin-bottom: 15px;
+}
+
+.users-heading{
+    font-size: 27px;
+    color: #464255;
+    margin-bottom: 15px;
+}
+
+.users-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    width: 100%;
+
+    .user-item{
+      width: 25%;
+      height: 152px;
+        position: relative;
+        border-radius: 14px;
+        padding: 10px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+
+        img{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+
+        .number{
+            font-size: 48px;
+            color: #464255;
+
+        }
+
+        .title{
+            font-size: 16px;
+            color: #4642559f;
+            font-weight: 600;
+            // width: 80px;
+        }
+    }
+}
+
+/* Tooltipni joylashtirish */
+.user-item::after {
+    content: attr(data-title); /* Tooltip matnini atributdan olish */
+    position: absolute;
+    bottom: 100%; /* Elementning ustida joylashtirish */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-size: 12px;
+  }
+  
+  /* Hover holatida tooltipni ko'rsatish */
+  .user-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .admin-main-wrapper{
+    overflow: scroll;
+    padding-bottom: 100px;
+    height: 87vh;
+  }
+
+  .course-calendar-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .card{
+      width: 100%;
+    }
+  }
+
+ 

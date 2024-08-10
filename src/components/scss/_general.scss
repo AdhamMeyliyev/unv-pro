@@ -4,4 +4,50 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // overflow: hidden;
 }
+
+ul,ol{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.calendar-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Umumiy scroll barni yashirish */
+// .scroll-container {
+//   overflow: auto; 
+//   display: none;/* Yashirish uchun scroll barni ko‘rsatish */
+// }
+
+// .scroll-container::-webkit-scrollbar {
+//   display: none; /* Chrome, Safari va Edge uchun */
+// }
+
+// .scroll-container {
+//   -ms-overflow-style: none; /* Internet Explorer va Edge uchun */
+//   scrollbar-width: none; /* Firefox uchun */
+// }
+
+// .css-1oqqzyl-MuiContainer-root {
+//   padding-left: 0px !important;
+// }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+*{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+

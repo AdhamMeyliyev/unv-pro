@@ -1,0 +1,102 @@
+.sidbar-wrapper {
+  width: 25vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 40px;
+  padding-right: 10px;
+
+  .sidbar-logo {
+    width: 214px;
+    height: 96px;
+  }
+
+  .unv-name {
+    font-size: 18px;
+    color: #162d3a;
+    letter-spacing: 1px;
+    margin-bottom: 37px;
+  }
+
+  .sidbar-list {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 10%;
+    // overflow-y:scroll ;
+
+    .sidbar-list-item {
+      width: 87%;
+      height: 54px;
+      display: flex;
+      padding: 15px 15px 15px 20px;
+      align-items: center;
+      gap: 20px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #464255;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      
+      &:hover {
+        background-color: #00b0754b;
+        color: #00b074;
+        font-weight: bold;
+        transition: all 0.3s ease-in;
+        i {
+          color: #00b074;
+          transition: all 0.3s ease-in;
+        }
+      }
+
+      &:active {
+        opacity: 0.6;
+        transition: all 0.3s ease-in;
+      }
+
+      &.active {
+        background-color: #00b0754b;
+        color: #00b074;
+        font-weight: bold;
+        transition: all 0.3s ease-in;
+
+        i {
+          color: #00b074;
+          transition: all 0.3s ease-in;
+        }
+        // .sidbar-item-active {
+        //   width: 10px;
+        //   height: 54px;
+        //   background-color: #00b0754b;
+        //   display: block;
+        //   border-radius: 8px;
+        //   position: relative;
+        //   right: 80%;
+        // }
+  
+
+        
+      }
+
+      i {
+        font-size: 20px;
+        color: #464255;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+}
+
+.sidbar-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidbar-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
