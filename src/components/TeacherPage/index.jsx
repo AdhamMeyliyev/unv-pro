@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 import StudentTable from "../AdminPage/studenttable";
 import AdminDashboard from "../AdminPage/admin-dashboard";
 import CourseCards from "../Course";
+import TeacherProfile from "./TeacherProfile";
 const courses = [
   {
     id: 1,
@@ -157,6 +158,7 @@ const TeacherPage = ({ onLogout }) => {
           <div className="teacher-main-wrapper">
             {/* Sidebar itemga qarab tarkibni ko'rsatish */}
             {activeItem === "dashboard" && <AdminDashboard />}
+            {activeItem === "profil" && <TeacherProfile />}
             {/* Qo'shimcha boshqa tarkiblar: */}
             {activeItem === "course" && (
               <div>

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 import StudentTable from "../AdminPage/studenttable";
-import AdminDashboard from "../AdminPage/admin-dashboard";
-import CourseCards from "../Course";
+import StudentProfile from "./StudentProfile";
+import StudentCards from "./StudentCards";
+import StudentDashboard from "./StudentDashboard";
 const courses = [
   {
     id: 1,
@@ -101,6 +102,7 @@ const StudentPage = ({ onLogout }) => {
               Dashboard
               <span className="sidbar-item-active"></span>
             </li>
+            
             <li
               className={`sidbar-list-item ${
                 activeItem === "profil" ? "active" : ""
@@ -145,12 +147,13 @@ const StudentPage = ({ onLogout }) => {
           {/* <CalendarClock /> */}
           <div className="teacher-main-wrapper">
             {/* Sidebar itemga qarab tarkibni ko'rsatish */}
-            {activeItem === "dashboard" && <AdminDashboard />}
+            {activeItem === "dashboard" && <StudentDashboard />}
+            {activeItem === "profil" && <StudentProfile />}
             {/* Qo'shimcha boshqa tarkiblar: */}
             {activeItem === "course" && (
               <div>
                 <div style={{ padding: "10px" }}>
-                  <CourseCards courses={courses} />
+                  <StudentCards courses={courses} />
                 </div>
               </div>
             )}

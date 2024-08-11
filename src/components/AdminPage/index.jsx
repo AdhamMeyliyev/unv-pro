@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
-import CalendarClock from "../CalendarClock";
 import AdminDashboard from "./admin-dashboard";
 import StudentTable from "./studenttable";
 import TeacherTable from "./teachertable";
 import CourseCards from "../Course";
 import MessagePage from "../MessagePage";
+import AdminProfile from "./AdminProfile";
 
 const courses = [
   {
@@ -16,6 +16,8 @@ const courses = [
     startDate: "2024-09-01",
     endDate: "2024-12-01",
     image: `${process.env.PUBLIC_URL}/assets/images/unv-img.png`,
+    instructor: 'John Doe', // Misol uchun to'liq nom
+    description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, modi?'
   },
   {
     id: 2,
@@ -24,52 +26,11 @@ const courses = [
     startDate: "2024-10-01",
     endDate: "2024-12-01",
     image: `${process.env.PUBLIC_URL}/assets/images/unv-img.png`,
+    instructor: 'Jane Smith',
+    description:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, modi?'
   },
-
-  {
-    id: 2,
-    name: "Advanced JavaScript",
-    duration: "2 months",
-    startDate: "2024-10-01",
-    endDate: "2024-12-01",
-    image: `${process.env.PUBLIC_URL}/assets/images/unv-img.png`,
-  },
-  {
-    id: 2,
-    name: "Advanced JavaScript",
-    duration: "2 months",
-    startDate: "2024-10-01",
-    endDate: "2024-12-01",
-    image: `${process.env.PUBLIC_URL}/assets/images/unv-img.png`,
-  },
-  {
-    id: 2,
-    name: "Advanced JavaScript",
-    duration: "2 months",
-    startDate: "2024-10-01",
-    endDate: "2024-12-01",
-    image: `${process.env.PUBLIC_URL}/assets/images/unv-img.png`,
-  },
-  {
-    id: 2,
-    name: "Advanced JavaScript",
-    duration: "2 months",
-    startDate: "2024-10-01",
-    endDate: "2024-12-01",
-    image: `${process.env.PUBLIC_URL}/assets/images/unv-img.png`,
-  },
-  {
-    id: 2,
-    name: "Advanced JavaScript",
-    duration: "2 months",
-    startDate: "2024-10-01",
-    endDate: "2024-12-01",
-    image: `${process.env.PUBLIC_URL}/assets/images/unv-img.png`,
-  },
-
-  // Add more courses as needed
+  // Qo'shimcha kurslar qo'shing
 ];
-
 const AdminPage = ({ onLogout }) => {
   const [activeItem, setActiveItem] = useState("dashboard");
 
@@ -85,6 +46,7 @@ const AdminPage = ({ onLogout }) => {
       <div className="admin-left sidbar">
         <div className="sidbar-wrapper">
           <a href="#">
+            
             <img
               className="sidbar-logo"
               src={`${process.env.PUBLIC_URL}/assets/logos/logo.png`}
@@ -166,36 +128,15 @@ const AdminPage = ({ onLogout }) => {
         </div>
       </div>
       <div className="admin-right">
-        <Navbar />
+      <Navbar />
         <h1 className="admin-page">Admin</h1>
         <div className="admin-main-wrapper">
-          {/* Sidebar itemga qarab tarkibni ko'rsatish */}
           {activeItem === "dashboard" && <AdminDashboard />}
-          {activeItem === "profil" && `Assalomu alaykum` }
-
-          {/* Qo'shimcha boshqa tarkiblar: */}
-          {activeItem === "course" && (
-            <div>
-              <div style={{ padding: "10px" }}>
-                <CourseCards courses={courses} />
-              </div>
-            </div>
-          )}
-          {activeItem === "message" && (
-            <div>
-              <MessagePage />
-            </div>
-          )}
-          {activeItem === "student" && (
-            <div>
-              <StudentTable />
-            </div>
-          )}
-          {activeItem === "teacher" && (
-            <div>
-              <TeacherTable />
-            </div>
-          )}
+          {activeItem === "profil" && <AdminProfile />}
+          {activeItem === "course" && <CourseCards courses={courses} />}
+          {activeItem === "message" && <MessagePage />}
+          {activeItem === "student" && <StudentTable />}
+          {activeItem === "teacher" && <TeacherTable />}
         </div>
       </div>
     </div>

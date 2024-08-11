@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import CourseCards from "../Course";
 import { useLocation, useNavigate } from 'react-router-dom';
+import StudentCards from "./StudentCards";
 const courses = [
   {
     id: 1,
@@ -69,7 +70,7 @@ const courses = [
   // Add more courses as needed
 ];
 
-const AdminDashboard = () => {
+const StudentDashboard = () => {
   const location = useLocation();
     const navigate = useNavigate();
 
@@ -143,7 +144,7 @@ const AdminDashboard = () => {
         </ul>
         <div className="course-calendar-wrapper">
         <div className="card" style={{ padding: '10px' }}>
-      <CourseCards courses={courses} />
+      <StudentCards courses={courses} />
     </div>
         {/* <CalendarClock /> */}
           </div>  
@@ -153,4 +154,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default StudentDashboard;
